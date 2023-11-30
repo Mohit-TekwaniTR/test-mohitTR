@@ -9,7 +9,7 @@ cat <<EOL > .vscode/tasks.json
         "label": "openFolder",
         "type": "shell",
         "command": "code",
-        "args": ["workspace/../messaging/Event.js"],
+        "args": ["workspace/../content/event_bus.md"],
         "presentation": {
           "echo": true,
           "reveal": "always",
@@ -19,6 +19,9 @@ cat <<EOL > .vscode/tasks.json
       }
     ]
   }
+
+
+
 
 
 EOL

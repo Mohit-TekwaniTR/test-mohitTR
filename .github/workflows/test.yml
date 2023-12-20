@@ -14,6 +14,9 @@ jobs:
         run: |
           # Access the PAT from GitHub Secrets
           export MY_PAT="${{ secrets.GIT_PAT_TOKEN }}"
+         - name: Debug Output
+              echo "MY_PAT: $MY_PAT"
+
 
           # Run the curl command with the obtained PAT
           curl -v \

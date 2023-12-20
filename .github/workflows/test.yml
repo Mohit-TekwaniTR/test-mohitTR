@@ -11,12 +11,11 @@ jobs:
 
       - name: Run Curl Command
         run: |
-          Access the PAT from GitHub Secrets
           export MY_PAT="${{ secrets.MY_PAT_TOKEN }}"
           echo "MY_PAT: ${{ secrets.MY_PAT_TOKEN }}"
 
 
-          # Run the curl command with the obtained PAT
+          
           curl -v \
             -X POST \
             -H "Accept: application/vnd.github+json" \

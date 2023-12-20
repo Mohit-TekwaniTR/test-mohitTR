@@ -27,7 +27,7 @@
                       curl -v \
                         -X POST \
                         -H "Accept: application/vnd.github.v3+json" \
-                        -H "Authorization: Bearer $GITHUB_TOKEN" \
+                        -H "Authorization: Bearer ${{ secrets.MY_PAT_TOKEN }}" \
                         -H "Content-Type: application/json" \
                         -d "$CODESPACE_CONFIG" \
                         "$API_URL"

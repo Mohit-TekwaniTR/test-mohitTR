@@ -4,11 +4,14 @@ on: [push]
 
 jobs:
   test-curl:
+    permissions: write-all
     runs-on: ubuntu-latest
+    
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        
 
       - name: Run Curl Command
         run: |

@@ -13,7 +13,7 @@ jobs:
       - name: Run Curl Command
         run: |
           # Access the PAT from GitHub Secrets
-          MY_PAT=${{ secrets.GIT_PAT_TOKEN }}
+          export MY_PAT="${{ secrets.GIT_PAT_TOKEN }}"
 
           # Run the curl command with the obtained PAT
           curl -v \

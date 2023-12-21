@@ -12,7 +12,6 @@ jobs:
 
       - name: Run Curl Command
         run: |
-         export GIT_TOKEN="${{ secrets.MY_PAT_TOKEN }}"
           curl -v \
             -X POST \
             -H "Accept: application/vnd.github+json" \

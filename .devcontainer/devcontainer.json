@@ -1,8 +1,4 @@
 {
     "name": "My Custom Codespace",
-    "dockerFile": ".devcontainer/Dockerfile",
-    "mounts": [
-        "source=/usr/bin/node,target=/usr/local/bin/node,type=bind,consistency=cached"
-    ],
     "postCreateCommand": "bash .devcontainer/setup-tasks.sh"
 }

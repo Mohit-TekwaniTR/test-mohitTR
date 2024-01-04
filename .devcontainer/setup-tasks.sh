@@ -31,5 +31,5 @@ cat <<EOL >.vscode/settings.json
 }
 EOL
 
-FILE_TO_OPEN="workspace/../content/event_bus.md"
+FILE_TO_OPEN="$FILE_PATH"
 code --goto "$FILE_TO_OPEN"

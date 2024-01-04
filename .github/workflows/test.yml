@@ -7,23 +7,11 @@ on:
 
 jobs:
   test-curl:
-    runs-on: ubuntu-latest
-
-    # env:
-    #   MY_ENV_VARIABLE: ${{ secrets.MY_ENV_VARIABLE }}
-    #   FILE_PATH: "workspace/../content/event_bus.md"  
+    runs-on: ubuntu-latest 
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install Dependencies
-        run: npm install 
 
       - name: Run Curl Command
         run: |
@@ -32,7 +20,5 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.MY_PAT_TOKEN }}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            -H "My-Env-Variable: $MY_ENV_VARIABLE" \
-            -H "File-Path: $FILE_PATH" \
             https://api.github.com/repos/mohit-tekwanitr/test-mohittr/codespaces \
             -d '{"ref":"main","machine":"standardLinux32gb"}'

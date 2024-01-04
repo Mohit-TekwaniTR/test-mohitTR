@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+FILE_TO_OPEN="$FILE_PATH"
+
 mkdir -p .vscode
 cat <<EOL >.vscode/tasks.json
 {
@@ -31,5 +34,4 @@ cat <<EOL >.vscode/settings.json
 }
 EOL
 
-FILE_TO_OPEN="$FILE_PATH"
 code --goto "$FILE_TO_OPEN"

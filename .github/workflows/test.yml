@@ -15,14 +15,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-        
-      - name: Set Up Environment
-        run: |
-          cd .devcontainer || exit 1
-          chmod +x setup-tasks.sh
-          
-      - name: Run Script
-        run: bash .devcontainer/setup-tasks.sh
 
       - name: Run Curl Command
         run: |

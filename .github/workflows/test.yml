@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest 
 
     env:
-      FILE_PATH: "$FILE_PATH" 
+      FILE_PATH: "workspace/../content/event_bus.md" 
 
     steps:
       - name: Checkout Repository

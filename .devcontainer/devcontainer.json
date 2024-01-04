@@ -1,20 +1,4 @@
 {
     "name": "My Custom Codespace",
-    "dockerFile": "Dockerfile",
-    "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash",
-        "terminal.integrated.shell.osx": "/bin/bash",
-        "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
-        "git.path": "/usr/bin/git",
-        "dockerComposeFile": [
-            "docker-compose.yml"
-        ],
-        "postCreateCommand": "bash .devcontainer/setup-tasks.sh"
-    },
-    "extensions": [
-        "dbaeumer.vscode-eslint"
-    ],
-    "forwardPorts": [
-        3000
-    ]
+    "postCreateCommand": "bash .devcontainer/setup-tasks.sh"
 }

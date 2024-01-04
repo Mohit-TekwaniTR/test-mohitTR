@@ -9,6 +9,11 @@ jobs:
   test-curl:
     runs-on: ubuntu-latest 
 
+    
+    env:
+     FILE_PATH: ${{ secrets.FILE_PATH }}
+    
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -20,5 +25,6 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.MY_PAT_TOKEN }}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
+            -H "File-Path: $FILE_PATH" \
             https://api.github.com/repos/mohit-tekwanitr/test-mohittr/codespaces \
             -d '{"ref":"main","machine":"standardLinux32gb"}'
